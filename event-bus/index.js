@@ -17,10 +17,10 @@ app.post("/events", (req, res) => {
 
   events.push(event);
 
-  axios.post("http://localhost:4000/event", event);
-  axios.post("http://localhost:4001/event", event);
-  axios.post("http://localhost:4002/event", event);
-  axios.post("http://localhost:4003/event", event);
+  axios.post("http://posts-clusterip-srv:4000/event", event);
+  // axios.post("http://localhost:4001/event", event);
+  // axios.post("http://localhost:4002/event", event);
+  // axios.post("http://localhost:4003/event", event);
 
   res.send({ status: "OK" });
 });
